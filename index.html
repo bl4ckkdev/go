@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Parameter Extractor v2</title>
+    <title>Go</title>
     <script>
         // JavaScript function to extract the last part of the URL path
         function getLastPathSegment() {
@@ -13,14 +13,12 @@
         }
 
         // Function to display the last path segment on the webpage
-        function displayParameter() {
-            var parameterValue = getLastPathSegment();
-            document.getElementById('parameter').textContent = parameterValue;
+        function redirect() {
+            window.location.replace(`https://hcoarvqmmwjrskahdxvy.supabase.co/functions/v1/api/${getLastPathSegment()}`);
         }
     </script>
 </head>
-<body onload="displayParameter()">
-    <h1>URL Parameter Extractor</h1>
-    <p>The value in the URL path is: <span id="parameter"></span></p>
+<body style="background-color: white;" onload="redirect()">
+
 </body>
 </html>
