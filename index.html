@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Parameter Extractor</title>
+    <script>
+        // JavaScript function to extract the last part of the URL path
+        function getLastPathSegment() {
+            var path = window.location.pathname;
+            var segments = path.split('/');
+            return segments[segments.length - 1];
+        }
+
+        // Function to display the last path segment on the webpage
+        function displayParameter() {
+            var parameterValue = getLastPathSegment();
+            document.getElementById('parameter').textContent = parameterValue;
+        }
+    </script>
+</head>
+<body onload="displayParameter()">
+    <h1>URL Parameter Extractor</h1>
+    <p>The value in the URL path is: <span id="parameter"></span></p>
+</body>
+</html>
