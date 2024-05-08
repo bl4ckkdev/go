@@ -14,7 +14,10 @@
 
         // Function to display the last path segment on the webpage
         function redirect() {
-            window.location.replace(`https://hcoarvqmmwjrskahdxvy.supabase.co/functions/v1/api/${getLastPathSegment()}`);
+            let url = getLastPathSegment();
+
+            if (url.length != 7) window.location.replace(`https://bl4ckdev.com`);
+            else window.location.replace(`https://hcoarvqmmwjrskahdxvy.supabase.co/functions/v1/api/${url}`);
         }
     </script>
 </head>
